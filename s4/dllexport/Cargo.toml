@@ -1,0 +1,5 @@
+[package]
+name = "dllexport"
+version = "0.1.0"
+edition = "2024"
+description = "Export functions from i686 Windows DLLs under MSVC-mangled names"

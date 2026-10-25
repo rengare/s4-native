@@ -1,0 +1,11 @@
+[package]
+name = "s4-x87"
+version = "0.1.0"
+edition = "2024"
+description = "Software x87: the FPU's arithmetic with its control word, integer arithmetic only, checked against the hardware"
+
+[lib]
+name = "s4_x87"
+
+[dev-dependencies]
+difftest = { path = "../difftest" }

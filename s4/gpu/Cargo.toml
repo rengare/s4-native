@@ -1,0 +1,10 @@
+[package]
+name = "s4-gpu"
+version = "0.1.0"
+edition = "2024"
+description = "Offscreen wgpu renderer for the game's pre-transformed Direct3D 7 triangles"
+
+[dependencies]
+wgpu = "30"
+pollster = "0.4"
+bytemuck = { version = "1", features = ["derive"] }

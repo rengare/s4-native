@@ -1,0 +1,15 @@
+[package]
+name = "lift"
+version = "0.1.0"
+edition = "2024"
+description = "x86 to Rust lifter: translates the original binaries' functions instruction by instruction"
+
+[lib]
+name = "lift"
+
+[[bin]]
+name = "lift"
+path = "src/main.rs"
+
+[dependencies]
+iced-x86 = { version = "1.21.0", default-features = false, features = ["std", "decoder", "instr_info", "encoder", "code_asm", "intel"] }

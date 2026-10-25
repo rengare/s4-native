@@ -1,0 +1,5 @@
+[package]
+name = "wsprobe"
+version = "0.1.0"
+edition = "2024"
+description = "Prints what Settlers 4's SimpleNet sees: gethostbyname(gethostname()) addresses"

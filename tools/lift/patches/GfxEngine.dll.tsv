@@ -1,0 +1,12 @@
+# Applied to GfxEngine.dll before it is translated (tools/lift_all.sh passes this file to the lifter).
+# Screen mode 4 of the game (Screenmode = 4 in Config/GameSettings.cfg) is 1600x1200 in the original; here it is 1920x1080.
+# The engine renders any size with the layout of the 1280x1024 mode, so the map view just gets bigger.
+# <address>	<old bytes>	<new bytes>	(comment)
+# the size the engine sets up for mode 4: mov ebp,640h / mov ebx,4B0h
+18c106a6	40060000	80070000	width 1600 -> 1920
+18c106ab	b0040000	38040000	height 1200 -> 1080
+# the check whether DirectDraw offers the mode (two copies): cmp ecx,640h / cmp dword ptr [eax+8],4B0h
+18c1014e	40060000	80070000	width
+18c10157	b0040000	38040000	height
+18c1022e	40060000	80070000	width
+18c10237	b0040000	38040000	height

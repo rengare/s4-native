@@ -1,0 +1,21 @@
+[package]
+name = "s3-play"
+version = "0.1.0"
+edition = "2024"
+description = "Runs the lifted Settlers III natively (work in progress)"
+build = "build.rs"
+
+[[bin]]
+name = "s3play"
+path = "src/main.rs"
+
+[dependencies]
+s4-host = { path = "../../s4/host" }
+s4-x86 = { path = "../../s4/x86" }
+lifted-s3main = { path = "../lifted/s3main" }
+lifted-ir50 = { path = "../lifted/ir50" }
+libc = "0.2"
+sdl3-sys = "=0.7.2"
+
+[features]
+sdl3-from-source = ["sdl3-sys/build-from-source"]

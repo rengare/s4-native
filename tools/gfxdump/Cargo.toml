@@ -1,0 +1,7 @@
+[package]
+name = "gfxdump"
+version = "0.1.0"
+edition = "2024"
+description = "Dumps tables the original GfxEngine.dll builds at load time (run under Wine)"
+
+[dependencies]

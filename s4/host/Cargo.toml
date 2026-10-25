@@ -1,0 +1,23 @@
+[package]
+name = "s4-host"
+version = "0.1.0"
+edition = "2024"
+description = "Runs the lifted original modules natively: a 32-bit address space, the PE images, and Rust implementations of the Windows/CRT functions they import"
+
+[lib]
+name = "s4_host"
+
+[dependencies]
+libc = "0.2"
+symphonia = { version = "0.5", default-features = false, features = ["mp3", "ogg", "vorbis"] }
+ab_glyph = "=0.2.32"
+s4-formats-clean = { path = "../formats-clean" }
+s4-gpu = { path = "../gpu" }
+bytemuck = "1"
+s4-x86 = { path = "../x86" }
+s4-x87 = { path = "../x87" }
+
+[dev-dependencies]
+s4-x86 = { path = "../x86" }
+lifted-gfxengine = { path = "../lifted/gfxengine" }
+s4-lifted = { path = "../lifted/all" }

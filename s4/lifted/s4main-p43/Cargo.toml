@@ -1,0 +1,12 @@
+[package]
+name = "lifted-s4main-p43"
+version = "0.1.0"
+edition = "2024"
+description = "A part of the lifted s4main (generated from the user's copy of the game)"
+
+[lib]
+path = "src/lib.rs"
+
+[dependencies]
+s4-x86 = { path = "../../x86" }
+s4-x87 = { path = "../../x87" }

@@ -1,0 +1,8 @@
+[package]
+name = "difftest"
+version = "0.1.0"
+edition = "2024"
+description = "Differential testing against the original binaries under Wine: loading, memory snapshots, branch coverage of the original"
+
+[lib]
+name = "difftest"

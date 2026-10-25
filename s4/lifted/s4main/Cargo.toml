@@ -1,0 +1,61 @@
+[package]
+name = "lifted-s4main"
+version = "0.1.0"
+edition = "2024"
+description = "S4_Main.exe lifted to Rust by tools/lift (sources are generated from the user's copy of the game and not committed)"
+
+[lib]
+name = "lifted_s4main"
+path = "src/lib.rs"
+
+[dependencies]
+s4-x86 = { path = "../../x86" }
+s4-x87 = { path = "../../x87" }
+lifted-s4main-p00 = { path = "../s4main-p00" }
+lifted-s4main-p01 = { path = "../s4main-p01" }
+lifted-s4main-p02 = { path = "../s4main-p02" }
+lifted-s4main-p03 = { path = "../s4main-p03" }
+lifted-s4main-p04 = { path = "../s4main-p04" }
+lifted-s4main-p05 = { path = "../s4main-p05" }
+lifted-s4main-p06 = { path = "../s4main-p06" }
+lifted-s4main-p07 = { path = "../s4main-p07" }
+lifted-s4main-p08 = { path = "../s4main-p08" }
+lifted-s4main-p09 = { path = "../s4main-p09" }
+lifted-s4main-p10 = { path = "../s4main-p10" }
+lifted-s4main-p11 = { path = "../s4main-p11" }
+lifted-s4main-p12 = { path = "../s4main-p12" }
+lifted-s4main-p13 = { path = "../s4main-p13" }
+lifted-s4main-p14 = { path = "../s4main-p14" }
+lifted-s4main-p15 = { path = "../s4main-p15" }
+lifted-s4main-p16 = { path = "../s4main-p16" }
+lifted-s4main-p17 = { path = "../s4main-p17" }
+lifted-s4main-p18 = { path = "../s4main-p18" }
+lifted-s4main-p19 = { path = "../s4main-p19" }
+lifted-s4main-p20 = { path = "../s4main-p20" }
+lifted-s4main-p21 = { path = "../s4main-p21" }
+lifted-s4main-p22 = { path = "../s4main-p22" }
+lifted-s4main-p23 = { path = "../s4main-p23" }
+lifted-s4main-p24 = { path = "../s4main-p24" }
+lifted-s4main-p25 = { path = "../s4main-p25" }
+lifted-s4main-p26 = { path = "../s4main-p26" }
+lifted-s4main-p27 = { path = "../s4main-p27" }
+lifted-s4main-p28 = { path = "../s4main-p28" }
+lifted-s4main-p29 = { path = "../s4main-p29" }
+lifted-s4main-p30 = { path = "../s4main-p30" }
+lifted-s4main-p31 = { path = "../s4main-p31" }
+lifted-s4main-p32 = { path = "../s4main-p32" }
+lifted-s4main-p33 = { path = "../s4main-p33" }
+lifted-s4main-p34 = { path = "../s4main-p34" }
+lifted-s4main-p35 = { path = "../s4main-p35" }
+lifted-s4main-p36 = { path = "../s4main-p36" }
+lifted-s4main-p37 = { path = "../s4main-p37" }
+lifted-s4main-p38 = { path = "../s4main-p38" }
+lifted-s4main-p39 = { path = "../s4main-p39" }
+lifted-s4main-p40 = { path = "../s4main-p40" }
+lifted-s4main-p41 = { path = "../s4main-p41" }
+lifted-s4main-p42 = { path = "../s4main-p42" }
+lifted-s4main-p43 = { path = "../s4main-p43" }
+lifted-s4main-p44 = { path = "../s4main-p44" }
+lifted-s4main-p45 = { path = "../s4main-p45" }
+lifted-s4main-p46 = { path = "../s4main-p46" }
+lifted-s4main-p47 = { path = "../s4main-p47" }

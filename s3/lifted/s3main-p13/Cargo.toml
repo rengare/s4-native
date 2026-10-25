@@ -1,0 +1,12 @@
+[package]
+name = "lifted-s3main-p13"
+version = "0.1.0"
+edition = "2024"
+description = "A part of the lifted s3main (generated from the user's copy of the game)"
+
+[lib]
+path = "src/lib.rs"
+
+[dependencies]
+s4-x86 = { path = "../../../s4/x86" }
+s4-x87 = { path = "../../../s4/x87" }

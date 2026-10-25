@@ -1,0 +1,10 @@
+[package]
+name = "s4-formats-clean"
+version = "0.1.0"
+edition = "2021"
+description = "Clean-room implementation target: two data-format primitives, specified by SPEC.md and tests/vectors only"
+license = "MIT"
+
+[dependencies]
+
+[dev-dependencies]

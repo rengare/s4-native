@@ -1,0 +1,29 @@
+name: ci
+on: [push, pull_request]
+jobs:
+  build:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, ubuntu-24.04-arm]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+      - name: Placeholders for the generated crates (they need the game; CI has none)
+        run: |
+          for d in s4/lifted/*/ s3/lifted/*/; do
+            [[ -f "$d/Cargo.toml" && ! -f "$d/src/lib.rs" ]] || continue
+            mkdir -p "$d/src"
+            printf '%s\n' 'pub fn dispatch(_c: &mut s4_x86::Cpu, _addr: u32) -> bool { false }' > "$d/src/lib.rs"
+          done
+        shell: bash
+      - name: Install window-system headers
+        run: sudo apt-get update && sudo apt-get install -y libwayland-dev libxkbcommon-dev libx11-dev libasound2-dev pkg-config
+      - name: Lifter, runtime and front end compile
+        run: |
+          cargo check --release --target "$(rustc -vV | sed -n 's/host: //p')" -p lift -p s4-x86 -p s4-x87 -p s4-host -p s4-play -p s3-play
+      - name: Unit tests that need no game
+        run: |
+          cargo test --release --target "$(rustc -vV | sed -n 's/host: //p')" -p s4-x87 --lib
+          cargo test --release --target "$(rustc -vV | sed -n 's/host: //p')" -p s4-formats-clean

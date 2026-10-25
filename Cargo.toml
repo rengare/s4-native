@@ -1,0 +1,521 @@
+[workspace]
+resolver = "3"
+members = ["s4/dllexport", "s4/difftest", "s4/x87", "s4/x86", "s4/host", "s4/gpu", "s4/x86test", "s4/lifted/*", "s4/play", "s3/lifted/*", "s3/play", "tools/gfxdump", "tools/lift", "tools/wsprobe"]
+# The generated game crates and the front end build for the host; the older hook-phase DLLs target i686 Windows.
+default-members = ["s4/dllexport", "s4/difftest", "s4/x87", "s4/x86", "tools/gfxdump", "tools/wsprobe"]
+
+[profile.release]
+opt-level = 2
+
+# Generated code compiles much faster (and is still fast enough) at opt-level 1.
+[profile.release.package.lifted-ir50]
+opt-level = 1
+
+[profile.release.package.lifted-s3main]
+opt-level = 1
+
+[profile.release.package.lifted-gfxengine]
+opt-level = 1
+
+# The parts of S3.EXE (tools/lift_s3.sh): rustc runs one per core, so few code generation units each (memory).
+[profile.release.package.lifted-s3main-p00]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s3main-p01]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s3main-p02]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s3main-p03]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s3main-p04]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s3main-p05]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s3main-p06]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s3main-p07]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s3main-p08]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s3main-p09]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s3main-p10]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s3main-p11]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s3main-p12]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s3main-p13]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s3main-p14]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s3main-p15]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s3main-p16]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s3main-p17]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s3main-p18]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s3main-p19]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s3main-p20]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s3main-p21]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s3main-p22]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s3main-p23]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s3main-p24]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s3main-p25]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s3main-p26]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s3main-p27]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s3main-p28]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s3main-p29]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s3main-p30]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s3main-p31]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s3main-p32]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s3main-p33]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s3main-p34]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s3main-p35]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s3main-p36]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s3main-p37]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s3main-p38]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s3main-p39]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s3main-p40]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s3main-p41]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s3main-p42]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s3main-p43]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s3main-p44]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s3main-p45]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s3main-p46]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s3main-p47]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s3main-p48]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s3main-p49]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s3main-p50]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s3main-p51]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s3main-p52]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s3main-p53]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s3main-p54]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s3main-p55]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s3main-p56]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s3main-p57]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s3main-p58]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s3main-p59]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s3main-p60]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s3main-p61]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s3main-p62]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s3main-p63]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s4main]
+opt-level = 1
+
+[profile.release.package.lifted-s4main-p00]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s4main-p01]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s4main-p02]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s4main-p03]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s4main-p04]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s4main-p05]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s4main-p06]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s4main-p07]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s4main-p08]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s4main-p09]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s4main-p10]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s4main-p11]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s4main-p12]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s4main-p13]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s4main-p14]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s4main-p15]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s4main-p16]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s4main-p17]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s4main-p18]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s4main-p19]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s4main-p20]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s4main-p21]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s4main-p22]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s4main-p23]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s4main-p24]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s4main-p25]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s4main-p26]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s4main-p27]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s4main-p28]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s4main-p29]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s4main-p30]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s4main-p31]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s4main-p32]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s4main-p33]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s4main-p34]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s4main-p35]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s4main-p36]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s4main-p37]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s4main-p38]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s4main-p39]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s4main-p40]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s4main-p41]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s4main-p42]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s4main-p43]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s4main-p44]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s4main-p45]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s4main-p46]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.lifted-s4main-p47]
+opt-level = 1
+codegen-units = 1
+
+[profile.release.package.s4-x86test]
+opt-level = 1
+
+[profile.release.package.lifted-guiengine2]
+opt-level = 1
+
+[profile.release.package.lifted-soundengine]
+opt-level = 1
+
+[profile.release.package.lifted-eventengine]
+opt-level = 1
+
+[profile.release.package.lifted-mapaccess]
+opt-level = 1
+
+[profile.release.package.lifted-savegameaccess]
+opt-level = 1
+
+[profile.release.package.lifted-videoengine]
+opt-level = 1
+
+[profile.release.package.lifted-s4bbgcclient]
+opt-level = 1
+
+[profile.release.package.lifted-bbsupport]
+opt-level = 1
+
+[profile.release.package.lifted-economyai]
+opt-level = 1
+
+[profile.release.package.lifted-mapgenerator]
+opt-level = 1
+
+[profile.release.package.lifted-rtcomp]
+opt-level = 1
+
+[profile.release.package.lifted-binkw32]
+opt-level = 1
+
+[profile.release.package.lifted-utility]
+opt-level = 1
+
+[profile.release.package.lifted-msvcrt]
+opt-level = 1
+
+[profile.release.package.lifted-msvcp60]
+opt-level = 1
+
+[profile.release.package.lifted-msvcirt]
+opt-level = 1

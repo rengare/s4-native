@@ -1,0 +1,21 @@
+[package]
+name = "s4-play"
+version = "0.1.0"
+edition = "2024"
+description = "Plays the lifted original game natively: SDL3 window, input and audio around the host layer"
+build = "build.rs"
+
+[[bin]]
+name = "s4play"
+path = "src/main.rs"
+
+[dependencies]
+s4-host = { path = "../host" }
+s4-lifted = { path = "../lifted/all" }
+s4-x86 = { path = "../x86" }
+libc = "0.2"
+sdl3-sys = "=0.7.2"
+
+[features]
+# Build SDL3 from its bundled source instead of linking the system library (needs cmake).
+sdl3-from-source = ["sdl3-sys/build-from-source"]

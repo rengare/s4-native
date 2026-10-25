@@ -1,0 +1,11 @@
+[package]
+name = "s4-x86"
+version = "0.1.0"
+edition = "2024"
+description = "Runtime of the lifted original code: registers, flags, memory, x87 and the bridge to native code"
+
+[lib]
+name = "s4_x86"
+
+[dependencies]
+s4-x87 = { path = "../x87" }

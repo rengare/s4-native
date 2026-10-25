@@ -1,0 +1,29 @@
+[package]
+name = "s4-lifted"
+version = "0.1.0"
+edition = "2024"
+description = "All lifted modules of the original game and their dispatchers"
+
+[lib]
+name = "s4_lifted"
+
+[dependencies]
+s4-x86 = { path = "../../x86" }
+lifted-s4main = { path = "../s4main" }
+lifted-gfxengine = { path = "../gfxengine" }
+lifted-guiengine2 = { path = "../guiengine2" }
+lifted-soundengine = { path = "../soundengine" }
+lifted-eventengine = { path = "../eventengine" }
+lifted-mapaccess = { path = "../mapaccess" }
+lifted-savegameaccess = { path = "../savegameaccess" }
+lifted-videoengine = { path = "../videoengine" }
+lifted-s4bbgcclient = { path = "../s4bbgcclient" }
+lifted-bbsupport = { path = "../bbsupport" }
+lifted-economyai = { path = "../economyai" }
+lifted-mapgenerator = { path = "../mapgenerator" }
+lifted-rtcomp = { path = "../rtcomp" }
+lifted-utility = { path = "../utility" }
+lifted-msvcrt = { path = "../msvcrt" }
+lifted-msvcp60 = { path = "../msvcp60" }
+lifted-msvcirt = { path = "../msvcirt" }
+lifted-binkw32 = { path = "../binkw32" }

@@ -1,0 +1,13 @@
+[package]
+name = "lifted-msvcirt"
+version = "0.1.0"
+edition = "2024"
+description = "MSVCIRT.DLL lifted to Rust by tools/lift (sources are generated from the user's copy of the game and not committed)"
+
+[lib]
+name = "lifted_msvcirt"
+path = "src/lib.rs"
+
+[dependencies]
+s4-x86 = { path = "../../x86" }
+s4-x87 = { path = "../../x87" }
